@@ -1,0 +1,46 @@
+<meta charset="UTF-8" />
+<script>
+    // Problema: Carreira Docente
+    /*
+    Peça para o Professor informar quantos anos de carreira possui. 
+    Peça também para que o Professor informe a quantidade de Projetos de Pesquisa que já coordenou. 
+    Também peça para que informe a quantidade de Projetos de Extensão que orientou. Por último, 
+    peça para informar a quantidade de TCCs que já orientou.
+
+    - Considere que cada ano de carreira equivale 2.5 pontos;
+    - Considere que cada Projeto de Pesquisa equivale a 5 pontos;
+    - Considere que cada Projeto de Extensão equivale a 5 pontos;
+    - Considere que cada TCC equivale a 3 pontos.
+    
+    Como resultado do cálculo das pontuações, a classificação poderá ser:
+
+    - Se o Professor possuir até 30 pontos (inclusive), será considerado "CONVIDADO";
+    - Se o Professor possuir até 50 pontos, será considerado "AGREGADO";
+    - Se o Professor possuir mais de 50 pontos, será considerado "TITULAR".
+    
+    Calcule os pontos e apresente a classificação do Professor.
+    */
+
+    // Entrada
+    const anos=Number(prompt('quantos anos de carreira possui'))
+    const projetosP=Number(prompt('quantos projetos de pesquisa ja coordenou'))
+    const projetosE=Number(prompt('informe a quantidade de projetos que orientou'))
+    const tcc= Number(prompt('ínforme a quantidade de TCCs que ja orientou'))
+    const pontuação= (anos*2.5) + (projetosP*5) + (projetosE*5) + (tcc*3)
+    const arredondamento= Math.round(pontuação)
+    // Processamento
+    if(pontuação <= 30){
+        alert(`a pontuação é foi de ${arredondamento} pontos e o professor foi classificado como convidado`)
+    }
+    else if(pontuação <= 50){
+        alert(`a pontuação é foi de ${arredondamento} pontos e o professor foi classificado como agregado`)
+    }
+    else if(pontuação > 50){
+        alert(`a pontuação é foi de ${arredondamento} pontos e o professor foi classificado como titular`)
+    }
+    else{
+        alert('valor inválido')
+    }
+    // Saída
+
+</script>
